@@ -15,4 +15,11 @@ public class MoodAnalyser {
         else
             return  "Happy";
     }
+
+    public String analyseMood2(String message) {
+        if(message.contains("I am in Any Mood"))
+            return "SAD";
+        else
+            return  "Happy";
+    }
 }
