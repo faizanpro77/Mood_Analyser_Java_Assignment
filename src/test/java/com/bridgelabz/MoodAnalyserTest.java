@@ -7,26 +7,10 @@ public class MoodAnalyserTest {
 
     @Test
     public void givenMood_whenMessageAnalyse_returnSad() {
-      MoodAnalyser moodAnalyser = new MoodAnalyser();
-      String mood = moodAnalyser.analyseMood("Message is sad");
+      MoodAnalyser moodAnalyser = new MoodAnalyser("Message is sad");
+      String mood = moodAnalyser.analyseMood();
       System.out.println(mood);
       Assert.assertEquals("Sad", mood);
-    }
-
-    @Test
-    public void givenMood_whenSad_returnSad() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String mood = moodAnalyser.analyseMood1("I am in Sad Mood");
-        System.out.println(mood);
-        Assert.assertEquals("SAD", mood);
-    }
-
-    @Test
-    public void givenMood_whenAnyMood_returnHappy() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String mood = moodAnalyser.analyseMood2("I am in nice Mood");
-        System.out.println(mood);
-        Assert.assertEquals("Happy", mood);
     }
 }
 
