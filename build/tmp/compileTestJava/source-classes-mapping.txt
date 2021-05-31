@@ -1,2 +1,4 @@
 com/bridgelabz/MoodAnalyserTest.java
  com.bridgelabz.MoodAnalyserTest
+com/bridgelabz/MoodAnalyserExceptionTest.java
+ com.bridgelabz.MoodAnalyserExceptionTest
