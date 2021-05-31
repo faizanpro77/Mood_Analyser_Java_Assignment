@@ -1,6 +1,9 @@
 package com.bridgelabz;
 
 public class MoodAnalyser {
+    String sad1 = "Message is sad";
+    String sad = "I am in Sad Mood";
+    String check;
 
     private String message;
     public MoodAnalyser(String message) { //constructor
@@ -11,9 +14,18 @@ public class MoodAnalyser {
     }
 
     public String analyseMood() {
-        if(message.contains("Message is sad"))
-            return "Sad";
+            return check = check(sad1);
+    }
+
+    public String analyseMood1() {
+        return check = check(sad);
+    }
+
+    public  String check(String message) {
+        if(message.contains(message))
+            return "SAD";
         else
-            return "Happy";
+            return  "Happy";
     }
 }
+

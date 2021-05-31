@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-30T16:16:49" hostname="DESKTOP-I19OHT9" time="0.014">
+<testsuite name="com.bridgelabz.MoodAnalyserTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-05-31T07:23:55" hostname="DESKTOP-I19OHT9" time="0.012">
   <properties/>
-  <testcase name="givenMood_whenMessageAnalyse_returnSad" classname="com.bridgelabz.MoodAnalyserTest" time="0.014"/>
-  <system-out><![CDATA[Sad
+  <testcase name="givenMood_whenSad_returnSad" classname="com.bridgelabz.MoodAnalyserTest" time="0.01"/>
+  <testcase name="givenMood_whenMessageAnalyse_returnSad" classname="com.bridgelabz.MoodAnalyserTest" time="0.001"/>
+  <system-out><![CDATA[SAD
+SAD
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
