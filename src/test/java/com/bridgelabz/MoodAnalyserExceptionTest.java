@@ -6,20 +6,23 @@ import org.junit.Test;
 public class MoodAnalyserExceptionTest {
 
     @Test
-    public void givenMood_whenNull_returnHappy() {
+    public void givenMood_whenNull_shouldThrowInvalidMoodException() {
         MoodAnalyserException moodAnalyserException = new MoodAnalyserException();
-        String  mood = moodAnalyserException.analyseMoodException(null);
-        System.out.println(mood);
-        Assert.assertEquals("Happy", mood);
+        try {
+            moodAnalyserException.analyseMoodException(null);
+        } catch (InvalidMoodException ex) {
+            Assert.assertEquals(InvalidMoodException.class, ex.getClass());
+        }
+    }
 
-
+    @Test
+    public void givenMood_whenEmpty_shouldThrowInvalidMoodException() {
+        MoodAnalyserException moodAnalyserException = new MoodAnalyserException();
+        try {
+            moodAnalyserException.analyseMoodException(" ");
+        } catch (Exception ex) {
+            Assert.assertEquals("invalid empty mood", ex.getClass());
+        }
     }
 }
 
-/* @Test
-    public void givenMood_whenAnyMood_returnHappy() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Happy Mood");
-        String mood = moodAnalyser.analyseMood2();
-        System.out.println(mood);
-        Assert.assertEquals("SAD", mood);
-    }*/
