@@ -3,6 +3,7 @@ package com.bridgelabz;
 public class MoodAnalyser {
     String sad1 = "Message is sad";
     String sad = "I am in Sad Mood";
+    String happy = "I am in Happy Mood";
     String check;
 
     private String message;
@@ -19,6 +20,10 @@ public class MoodAnalyser {
 
     public String analyseMood1() {
         return check = check(sad);
+    }
+
+    public String analyseMood2() {
+        return check = check(happy);
     }
 
     public  String check(String message) {
