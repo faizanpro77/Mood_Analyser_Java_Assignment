@@ -21,7 +21,7 @@ public class MoodAnalyserExceptionTest {
         try {
             moodAnalyserException.analyseMoodException(" ");
         } catch (Exception ex) {
-            Assert.assertEquals("invalid empty mood", ex.getClass());
+            Assert.assertEquals("invalid empty mood", ex.getMessage());
         }
     }
 }
