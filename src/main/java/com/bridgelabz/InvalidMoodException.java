@@ -1,10 +1,13 @@
 package com.bridgelabz;
 
-public class InvalidMoodException extends RuntimeException {
+public class InvalidMoodException extends Throwable {
 
-    String message;
-    public InvalidMoodException(String message) {
+    enum exceptionType {
+        ENTERED_EMPTY, ENTERED_NULL
+    }
+    exceptionType type;
+    public InvalidMoodException(exceptionType type, String message) {
         super(message);
-        this.message = message;
+        this.type = type;
     }
 }

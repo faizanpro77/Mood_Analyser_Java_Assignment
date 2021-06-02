@@ -2,17 +2,21 @@ package com.bridgelabz;
 
 public class MoodAnalyserException {
 
-    public String analyseMoodException(String message) {
+    private String message;
+    public MoodAnalyserException(String message) {
+        this.message = message;
+    }
+    public String analyseMoodException() throws InvalidMoodException {
         try {
-            String emptyString = message.replaceAll(" ","");
-            if(emptyString.length() < 1) {
-                throw new InvalidMoodException("invalid empty mood");
+            if (message.length() == 0)  {
+                throw new InvalidMoodException(InvalidMoodException.exceptionType.ENTERED_EMPTY,"invalid empty mood");
             }
-            if (message.contains("SAD"))
+            if (message.contains("Sad"))
                 return "SAD";
+            else
+                return "Happy";
         } catch (NullPointerException ex) {
-            throw new InvalidMoodException("invalid null mood");
+            throw new InvalidMoodException(InvalidMoodException.exceptionType.ENTERED_NULL,"invalid null mood");
         }
-        return "Happy";
     }
 }
